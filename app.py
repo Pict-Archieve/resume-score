@@ -487,10 +487,13 @@ def run():
 #             st.write(f"**{key}:** {value}")
 #         run()
 
-text = input_pdf_text(uploaded_file)
-response = get_gemini_response(input_prompt.format(text=text, jd=jd))
-st.subheader("Response:")
-parsed_response = json.loads(response)
-for key, value in parsed_response.items():
-    st.write(f"**{key}:** {value}")
-run()
+try:
+    text = input_pdf_text(uploaded_file)
+    response = get_gemini_response(input_prompt.format(text=text, jd=jd))
+    st.subheader("Response:")
+    parsed_response = json.loads(response)
+    for key, value in parsed_response.items():
+        st.write(f"**{key}:** {value}")
+    run()
+except Exception as e:
+    st.error(f"An error occurred: {str(e)}")
