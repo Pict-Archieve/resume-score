@@ -37,7 +37,7 @@ load_dotenv()
 # Configure Streamlit page settings
 st.set_page_config(
    page_title="Smart Resume Analyzer",
-#    page_icon='./Logo/SRA_Logo.ico',
+   page_icon='./Logo/SRA_Logo.ico',
    layout="centered",
 )
 
