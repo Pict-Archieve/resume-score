@@ -37,8 +37,8 @@ load_dotenv()
 # Configure Streamlit page settings
 st.set_page_config(
    page_title="Smart Resume Analyzer",
-    page_icon='./Logo/SRA_Logo.ico',
-    layout="centered",
+   page_icon='./Logo/SRA_Logo.ico',
+   layout="centered",
 )
 
 API_KEY = os.getenv("API_KEY")
