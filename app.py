@@ -32,7 +32,7 @@ nltk.download('stopwords')
 spacy.load('en_core_web_sm')
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 
 # Configure Streamlit page settings
 st.set_page_config(
@@ -174,8 +174,8 @@ def fetch_video_metadata(video_url):
             'description': yt.description
         }
         return video_info
-    except Exception as e:
-        print("Error fetching video metadata:", str(e))
+    except Exception:
+        print("Error fetching video metadata:", str(Exception))
         return None
     
 def fetch_yt_video(link):
@@ -495,5 +495,5 @@ try:
     for key, value in parsed_response.items():
         st.write(f"**{key}:** {value}")
     run()
-except Exception as e:
-    st.error(f"An error occurred: {str(e)}")
+except Exception:
+    st.error(f"An error occurred: {str(Exception)}")
