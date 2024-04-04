@@ -41,7 +41,7 @@ st.set_page_config(
    layout="centered",
 )
 
-API_KEY = os.getenv("API_KEY")
+API_KEY = "AIzaSyAPqRmJnnfSFMr4uHSl0GwZn0MMaHc9p-4"
 if not API_KEY:
     st.error("Please enter your Google API Key.")
     st.stop()
